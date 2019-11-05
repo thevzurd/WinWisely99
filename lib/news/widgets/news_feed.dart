@@ -80,7 +80,7 @@ class _NewsFeedBody extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(5.0),
                                 child: news.thumbnailUrl == null
                                     ? const Text('')
-                                    : NetworkImage(
+                                    : Image.network(
                                         news.thumbnailUrl,
                                       ),
                               ),
