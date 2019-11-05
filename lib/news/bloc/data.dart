@@ -1,46 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:meta/meta.dart';
 import 'package:repository/repository.dart';
 
 import 'package:com.winwisely99.app/services/services.dart';
-import 'package:com.winwisely99.app/chat_view/chat_view.dart';
 
 part 'data.g.dart';
 
 @immutable
 @HiveType()
-class Conversations implements Entity {
-  const Conversations({
+class News implements Entity {
+  const News({
     @required this.id,
     @required this.title,
-    @required this.members,
-    @required this.avatarURL,
+    @required this.text,
     @required this.timestamp,
-    this.membersIds,
-    this.lastChat,
+    @required this.thumbnailUrl,
+    this.uid,
+    this.createdBy,
   })  : assert(id != null),
         assert(title != null),
-        assert(members != null),
         assert(timestamp != null),
-        assert(avatarURL != null);
+        assert(thumbnailUrl != null);
+
   @HiveField(0)
-  final Id<Conversations> id;
+  final Id<News> id;
 
   @HiveField(1)
   final String title;
 
   @HiveField(2)
-  final List<User> members;
+  final String text;
 
   @HiveField(3)
-  final String avatarURL;
+  final String thumbnailUrl;
 
   @HiveField(4)
   final DateTime timestamp;
 
   @HiveField(5)
-  final List<Id<User>> membersIds;
+  final Id<User> uid;
 
   @HiveField(6)
-  final ChatModel lastChat;
+  final User createdBy;
 }

@@ -1,14 +1,13 @@
 import 'dart:io' show Directory;
 
 // TODO(FlutterDevelopers): Import modules here
-
+import 'package:com.winwisely99.app/chat_view/chat_view.dart';
+import 'package:com.winwisely99.app/conversations/conversations.dart';
+import 'package:com.winwisely99.app/news/news.dart';
+import 'package:com.winwisely99.app/services/services.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:repository/repository.dart';
-
-import './chat_view/bloc/data.dart';
-import './conversations/bloc/data.dart';
-import './services/services.dart';
 
 bool _isHiveInitialized = false;
 
@@ -29,7 +28,7 @@ Future<void> initializeHive() async {
     ..registerAdapter(IdAdapter<User>(), 0)
     ..registerAdapter(IdAdapter<StorageData>(), 1)
     // News Module
-    //..registerAdapter(IdAdapter<News>(), 2)
+    ..registerAdapter(IdAdapter<News>(), 2)
     // conversations module
     ..registerAdapter(IdAdapter<Conversations>(), 3)
     // chat_view module
@@ -45,9 +44,9 @@ Future<void> initializeHive() async {
     ..registerAdapter(ConversationsAdapter(), 9)
     // chat_view module
     ..registerAdapter(AttachmentTypeAdapter(), 10)
-    ..registerAdapter(ChatAdapter(), 11);
-  // News Module
-  //..registerAdapter(NewsAdapter(), 8)
+    ..registerAdapter(ChatAdapter(), 11)
+    // News Module
+    ..registerAdapter(NewsAdapter(), 8);
 }
 
 class IdAdapter<T> extends TypeAdapter<Id<T>> {

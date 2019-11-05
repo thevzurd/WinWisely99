@@ -1,12 +1,14 @@
 import 'dart:io';
-import '../../services/services.dart';
-import '../chat_view.dart';
 import 'dart:isolate';
+
+import 'package:com.winwisely99.app/services/services.dart';
 import 'package:grpc/grpc.dart';
+
 import '../api/v1/chat.pb.dart';
 import '../api/v1/chat.pbgrpc.dart' as grpc;
 import '../api/v1/google/protobuf/empty.pb.dart';
 import '../api/v1/google/protobuf/timestamp.pb.dart';
+import '../bloc/data.dart';
 
 /// Thread to listen messages from the server
 void chatIncoming(SendPort portReceive) async {

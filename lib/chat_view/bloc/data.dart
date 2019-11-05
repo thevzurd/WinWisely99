@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:repository/repository.dart';
-import '../../services/services.dart';
+
+import 'package:com.winwisely99.app/services/services.dart';
 
 part 'data.g.dart';
 

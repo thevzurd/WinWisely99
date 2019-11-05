@@ -2,7 +2,7 @@ import 'package:meta/meta.dart';
 import 'package:repository/repository.dart';
 import 'package:repository_hive/repository_hive.dart';
 
-import '../../services.dart';
+import '../services.dart';
 import '../bloc/data.dart';
 import 'network.dart';
 

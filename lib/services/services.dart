@@ -1,11 +1,11 @@
 import 'dart:async';
-export 'src/bloc/data.dart';
-export 'src/services/auth_user_service.dart';
-export 'src/services/network.dart';
-export 'src/services/storage.dart';
-export 'src/services/user.dart';
-export 'src/utils/utils.dart';
-export 'src/widgets/splash_screen.dart';
+export './bloc/data.dart';
+export './services/auth_user_service.dart';
+export './services/network.dart';
+export './services/storage.dart';
+export './services/user.dart';
+export './utils/utils.dart';
+export './widgets/splash_screen.dart';
 
 Completer<dynamic> storageServiceReadyCompleter = Completer<dynamic>();
 Completer<dynamic> networkServiceReadyCompleter = Completer<dynamic>();

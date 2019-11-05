@@ -1,10 +1,10 @@
 import 'package:meta/meta.dart';
 import 'package:repository/repository.dart';
 import 'package:repository_hive/repository_hive.dart';
-import '../../services/services.dart';
+
+import 'package:com.winwisely99.app/services/services.dart';
 
 import '../bloc/data.dart';
-
 import 'data.dart';
 
 class ConversationsBloc {

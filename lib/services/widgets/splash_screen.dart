@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../services.dart';
+import '../services.dart';
 
 /// This splash screen waits for all the services to be initialized. When they
 /// are, it automatically redirects either to the [NewsFeed] or the

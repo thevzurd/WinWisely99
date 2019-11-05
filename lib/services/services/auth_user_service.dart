@@ -4,8 +4,8 @@ import 'package:meta/meta.dart';
 import 'package:repository/repository.dart';
 import 'package:rxdart/subjects.dart';
 
-import '../../services.dart';
 import '../bloc/data.dart';
+import '../services.dart';
 import 'storage.dart';
 import 'user.dart';
 
